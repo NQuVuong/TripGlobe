@@ -1,5 +1,6 @@
 import React from 'react'
-import BgImage from '../assets/Background.jpg' // CONCEPT: Static Asset Import - Đảm bảo bạn đã có file này
+import BgImage from '../assets/Background.jpg'
+import { Link } from 'react-router-dom'
 
 // CONCEPT: Constants (Hằng số) - Giúp code sạch và không render lại dữ liệu tĩnh
 const SEARCH_FIELDS = [
@@ -35,9 +36,12 @@ const Hero = () => {
 
                     {/* HỆ THỐNG NÚT BẤM (Pill shape): Điểm mấu chốt để giống 100% */}
                     <div className="flex justify-center gap-5 mt-10">
-                        <button className="bg-[#11223f] hover:bg-[#0a1529] text-white px-9 py-4 rounded-full text-[15px] font-extrabold transition-all shadow-lg cursor-pointer border-none outline-none">
+                        <Link
+                            to="/contact"
+                            className="inline-block bg-[#11223f] hover:bg-[#0a1529] text-white px-9 py-4 rounded-full text-[15px] font-extrabold transition-all shadow-lg cursor-pointer border-none outline-none text-center no-underline"
+                        >
                             Contact Us
-                        </button>
+                        </Link>
                         <button className="bg-white border-2 border-[#11223f] text-[#11223f] px-9 py-4 rounded-full text-[15px] font-extrabold hover:bg-gray-50 transition-all cursor-pointer shadow-md">
                             Get Quote
                         </button>
